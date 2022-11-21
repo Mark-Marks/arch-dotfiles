@@ -105,16 +105,19 @@ if [ "$dosymlink" = true ]
 then
 	echo "started symlinking"
 	#ln -s ~/arch-dotfiles/.gitconfig ~/.gitconfig
-	ln -s "${DOTFILESPATH}/.zshrc" ~/.zshrc
-	ln -s "${DOTFILESPATH}/.bashrc" ~/.bashrc
-	ln -s "${DOTFILESPATH}/.bash_profile" ~/.bash_profile
+	cd ~
+	ln -rs "$dotfilespath"/.zshrc .zshrc
+	ln -rs "$dotfilespath"/.bashrc .bashrc
+	ln -rs "$dotfilespath"/.bash_profile .bash_profile
 	mkdir ~/.config/macchina
 	mkdir ~/.config/macchina/themes
-	ln -s "${DOTFILESPATH}/macchina.toml" ~/.config/macchina/macchina.toml
-	ln -s "${DOTFILESPATH}/hydromez.toml" ~/.config/macchina/themes/hydromez.toml
-	ln -s "${DOTFILESPATH}/konsole.prof" ~/.local/share/konsole/konsole.prof
+	ln -rs "$dotfilespath"/macchina.toml .config/macchina/macchina.toml
+	ln -rs "$dotfilespath"/hydromez.toml .config/macchina/themes/hydromez.toml
+	ln -rs "$dotfilespath"/konsole.profile .local/share/konsole/konsole.profile
+	ln -rs "$dotfilespath"/Dracula.colorscheme .local/share/konsole/Dracula.colorscheme
 	echo "completed symlinking"
 fi
 
 echo "-- !!completed setting up!! --"
 exit 0
+

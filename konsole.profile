@@ -8,5 +8,5 @@ CursorShape=2
 [General]
 Command=/bin/zsh
 Environment=TERM=xterm-256color,COLORTERM=truecolor
-Name=prof
+Name=konsole
 Parent=FALLBACK/

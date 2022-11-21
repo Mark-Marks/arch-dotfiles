@@ -1,7 +1,7 @@
 private arch linux dotfiles
 
 ```bash
-git clone httpS://github.com/Mark-Marks/arch-dotfiles
+git clone https://github.com/Mark-Marks/arch-dotfiles
 ```
 ```bash
 cd arch-dotfiles

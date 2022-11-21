@@ -6,7 +6,7 @@ doposh=true
 doposhconfig=true
 donerdfonts=true
 dosymlink=true
-dotfilespath="~/arch-dotfiles/"
+dotfilespath="~/arch-dotfiles"
 
 while getopts ":hpyoOnsa:" option do
 	case $option in
@@ -103,14 +103,14 @@ if [ "$dosymlink" = true ]
 then
 	echo "started symlinking"
 	#ln -s ~/arch-dotfiles/.gitconfig ~/.gitconfig
-	ln -s ~/arch-dotfiles/.zshrc ~/.zshrc
-	ln -s ~/arch-dotfiles/.bashrc ~/.bashrc
-	ln -s ~/arch-dotfiles/.bash_profile ~/.bash_profile
-	mkdir ~/arch-config/macchina
-	mkdir ~/arch-config/macchina/themes
-	ln -s ~/arch-dotfiles/macchina.toml ~/.config/macchina/macchina.toml
-	ln -s ~/arch-dotfiles/hydromez.toml ~/.config/macchina/themes/hydromez.toml
-	ln -s ~/arch-dotfiles/konsole.prof ~/.local/share/konsole/konsole.prof
+	ln -s "${DOTFILESPATH}/.zshrc" ~/.zshrc
+	ln -s "${DOTFILESPATH}/.bashrc" ~/.bashrc
+	ln -s "${DOTFILESPATH}/.bash_profile" ~/.bash_profile
+	mkdir ~/.config/macchina
+	mkdir ~/config/macchina/themes
+	ln -s "${DOTFILESPATH}/macchina.toml" ~/.config/macchina/macchina.toml
+	ln -s "${DOTFILESPATH}/hydromez.toml" ~/.config/macchina/themes/hydromez.toml
+	ln -s "${DOTFILESPATH}/konsole.prof" ~/.local/share/konsole/konsole.prof
 	echo "completed symlinking"
 fi
 

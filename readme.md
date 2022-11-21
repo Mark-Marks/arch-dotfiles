@@ -22,12 +22,13 @@ script usage:
 -O = don't configure oh-my-posh
 -n = don't install nerd fonts complete jetbrains
 -s = don't do symlinks
+-a PATH = change the path for my dotfiles
 ```
 
 todo:
 ```
-- finish zshrc
-- finish bashrc
-- finish bash_profile
++ finish zshrc
++ finish bashrc
++ finish bash_profile
 + add macchina.toml and hydromez.toml
 ```

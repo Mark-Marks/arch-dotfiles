@@ -8,7 +8,8 @@ donerdfonts=true
 dosymlink=true
 dotfilespath="~/arch-dotfiles"
 
-while getopts ":hpyoOnsa:" option do
+while getopts ":hpyoOnsa:" option
+do
 	case $option in
 		h) echo "-h = view script usage\n-p = don't install packages\n-y = don't install yay\n-o = don't install oh-my-posh\n-O = don't configure oh-my-posh \n-n = don't install nerd fonts complete jetbrains\n-s = don't do symlinks\n-a = change the path for my dotfiles"
 			exit;;

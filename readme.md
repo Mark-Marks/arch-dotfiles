@@ -29,5 +29,5 @@ todo:
 - finish zshrc
 - finish bashrc
 - finish bash_profile
-- add macchina.toml and hydromez.toml
++ add macchina.toml and hydromez.toml
 ```

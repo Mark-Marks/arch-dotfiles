@@ -22,3 +22,11 @@ script usage:
 -o = don't install oh-my-posh
 -s = don't do symlinks
 ```
+
+todo:
+```
+- finish zshrc
+- finish bashrc
+- finish bash_profile
+- add macchina.toml and hydromez.toml
+```

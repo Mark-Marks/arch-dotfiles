@@ -37,7 +37,7 @@ if [ "$dopackages" = true ]
 then
 	echo "started installing packages"
 	# install wanted packages
-	sudo pacman -S --needed zsh wget noto-fonts noto-fonts-emoji git base-devel
+	sudo pacman -S --needed --noconfirm zsh wget noto-fonts noto-fonts-emoji git base-devel unzip
 	echo "completed installing packages"
 fi
 
@@ -56,7 +56,7 @@ fi
 if [ "$dopackages" = true ]
 then
 	echo "started installing yay packages"
-	yay -S macchina
+	yay -S --needed --noconfirm macchina
 
 	echo "completed installing yay packages"
 fi
@@ -88,12 +88,13 @@ then
 	echo "started downloading & installing jetbrains mono"
 	mkdir /tmp/fontsInstallation
 	wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/JetBrainsMono.zip -O /tmp/fontsInstallation/JetBrainsMono.zip
+	cd /tmp/fontsInstallation
 	unzip /tmp/fontsInstallation/JetBrainsMono.zip
 	mkdir ~/.local/share/fonts/
-	mv /tmp/fontsInstallation/'JetBrains Mono Bold Italic Nerd Font Complete.ttf' ~/.local/share/fonts/
-	mv /tmp/fontsInstallation/'JetBrains Mono Bold Nerd Font Complete.ttf' ~/.local/share/fonts/
-	mv /tmp/fontsInstallation/'JetBrains Mono Italic Nerd Font Complete.ttf' ~/.local/share/fonts/
-	mv /tmp/fontsInstallation/'JetBrains Mono Regular Nerd Font Complete.ttf' ~/.local/share/fonts/
+	mv 'JetBrains Mono Bold Italic Nerd Font Complete.ttf' ~/.local/share/fonts/
+	mv 'JetBrains Mono Bold Nerd Font Complete.ttf' ~/.local/share/fonts/
+	mv 'JetBrains Mono Italic Nerd Font Complete.ttf' ~/.local/share/fonts/
+	mv 'JetBrains Mono Regular Nerd Font Complete.ttf' ~/.local/share/fonts/
 	rm /tmp/fontsInstallation/*
 	fc-cache
 	echo "completed downloading & installing jetbrains mono"
@@ -108,7 +109,7 @@ then
 	ln -s "${DOTFILESPATH}/.bashrc" ~/.bashrc
 	ln -s "${DOTFILESPATH}/.bash_profile" ~/.bash_profile
 	mkdir ~/.config/macchina
-	mkdir ~/config/macchina/themes
+	mkdir ~/.config/macchina/themes
 	ln -s "${DOTFILESPATH}/macchina.toml" ~/.config/macchina/macchina.toml
 	ln -s "${DOTFILESPATH}/hydromez.toml" ~/.config/macchina/themes/hydromez.toml
 	ln -s "${DOTFILESPATH}/konsole.prof" ~/.local/share/konsole/konsole.prof

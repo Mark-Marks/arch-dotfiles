@@ -12,3 +12,13 @@ chmod +x ./setup.sh
 ```sh
 ./setup.sh
 ```
+
+script usage:
+```
+-h = view script usage
+-p = don't install packages
+-y = don't install yay
+-n = don't install nerd fonts complete jetbrains
+-o = don't install oh-my-posh
+-s = don't do symlinks
+```

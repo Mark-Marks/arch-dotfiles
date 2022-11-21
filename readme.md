@@ -1,14 +1,14 @@
 private arch linux dotfiles
 
-```bash
+```sh
 git clone https://github.com/Mark-Marks/arch-dotfiles
 ```
-```bash
+```sh
 cd arch-dotfiles
 ```
-```bash
+```sh
 chmod +x ./setup.sh
 ```
-```bash
+```sh
 ./setup.sh
 ```

@@ -1,1 +1,1 @@
-# Created by newuser for 5.9
+exec "$(oh-my-posh init zsh --config ~/.poshthemes/amro.omp.json)"

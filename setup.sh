@@ -95,7 +95,7 @@ fi
 if [ "$dosymlink" = true ]
 then
 	echo "started symlinking"
-	ln -s ~/arch-dotfiles/.gitconfig ~/.gitconfig
+	#ln -s ~/arch-dotfiles/.gitconfig ~/.gitconfig
 	ln -s ~/arch-dotfiles/.zshrc ~/.zshrc
 	ln -s ~/arch-dotfiles/.bashrc ~/.bashrc
 	ln -s ~/arch-dotfiles/.bash_profile ~/.bash_profile

@@ -18,8 +18,9 @@ script usage:
 -h = view script usage
 -p = don't install packages
 -y = don't install yay
--n = don't install nerd fonts complete jetbrains
 -o = don't install oh-my-posh
+-O = don't configure oh-my-posh
+-n = don't install nerd fonts complete jetbrains
 -s = don't do symlinks
 ```
 

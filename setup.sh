@@ -3,22 +3,24 @@
 dopackages=true
 doyay=true
 doposh=true
+doposhconfig=true
 donerdfonts=true
 dosymlink=true
 
-while getopts ":hpynos" option do
+while getopts ":hpyoOns" option do
 	case $option in
-		h) echo "-h = view script usage\n-p = don't install packages\n-y = don't install yay\n-p = don't install oh-my-posh\n-n = don't install nerd fonts complete jetbrains\n-s = don't do symlinks"
+		h) echo "-h = view script usage\n-p = don't install packages\n-y = don't install yay\n-o = don't install oh-my-posh\n-O = don't configure oh-my-posh \n-n = don't install nerd fonts complete jetbrains\n-s = don't do symlinks"
 			exit;;
 		p) dopackages=false;;
 		y) doyay=false;;
-		n) donerdfonts=false;;
 		o) doposh=false;;
+		O) doposhconfig=false;;
+		n) donerdfonts=false;;
 		s) dosymlink=false;;
 	esac
 done
 
-if [ "$dopackages" = false ] && [ "$doyay" = false ] && [ "$donerdfonts" = false ] && [ "$doposh" = false ] && [ "$dosymlink" = false ]
+if [ "$dopackages" = false ] && [ "$doyay" = false ] && [ "$donerdfonts" = false ] && [ "$doposh" = false ] && [ "$doposhconfig" = false ] && [ "$dosymlink" = false ]
 then
 	echo "why are you running this script if you don't want it to do anything?"
 	exit 1
@@ -63,7 +65,10 @@ then
 	sudo wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/posh-linux-amd64 -O /usr/local/bin/oh-my-posh
 	sudo chmod +x /usr/local/bin/oh-my-posh
 	echo "completed installing oh-my-posh"
-	
+fi
+
+if [ "$doposhconfig" = true ]
+then
 	echo "started customizing oh-my-posh"
 	# download oh-my-posh themes
 	mkdir ~/.poshthemes

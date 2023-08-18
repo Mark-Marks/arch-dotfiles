@@ -1,4 +1,1 @@
-#!/bin/sh
-curl -s https://install.zerotier.com | sudo bash
-sudo zerotier-cli join 52b337794f88a8f9
-sudo systemctl start ssh
+
